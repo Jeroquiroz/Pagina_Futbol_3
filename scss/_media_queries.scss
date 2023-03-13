@@ -1,0 +1,99 @@
+
+
+/* RESPONSIVE PAGINAS - GALERIA E INSCRIBITE */
+
+
+
+
+@media screen and (max-width: 992px) {
+
+
+    .formular {
+    
+        flex-direction: column;
+        width: 80%;
+    
+    }    
+    
+    
+    .galeria    {
+    
+        background-image: $back-color-green, url(../assets/Img/pikrepo.jpg);
+        background-repeat: no-repeat;   
+        background-size: cover;
+        background-position: center; 
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        color: white;
+        text-decoration: underline;
+
+        .editcar {
+    
+            display: flex;
+            justify-content: center;
+            width:100%;
+            padding: 0;
+            margin: 0;
+            height:  70vh;
+            object-fit: cover;
+
+            .tamaño {
+    
+                width: 100% !important;
+                padding: 0;
+                margin: 0;
+                object-fit: cover;
+                height: 55vh;
+            }
+            
+        }
+        
+                }
+    
+    
+    /* RESPONSIVE - HEADER */
+    
+    .cabecera{
+    
+        z-index: 10; /*Coloco la cabecer en superposicion al resto de los contenedores*/
+        background-image: $back-color-green,url(../assets/Img/fondo1.jpg); /*Realizo una imagen de fondo con una capa gradiente por encima para que no se confundan los textos de adelante*/
+        background-size: cover; /*Hago que la foto ocupe todo el contenedor*/
+        position: sticky; /*Dejo el header en posicion pegajosa*/
+        top: 0px;
+        height: auto; /*Defino la altura del header*/
+        padding: 2vh 2vh;
+        border: map-get($bordes, borde-cabecera-mq) ;  
+
+        .logo   {   
+            
+            height: 12vh;
+            width: 15vh;  
+            
+        }
+
+        .flextitulo {
+            
+            display: none;   
+
+            .titulo { 
+                display:none; 
+            }
+
+           }
+
+        .ulmod {
+                    width: 100%;
+                    height: auto;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+
+                    .links {
+                        color: rgb(255, 255, 255) !important;
+                        margin: none;
+                    }     
+            
+            }   
+        }
+    
+    }

@@ -1,0 +1,18 @@
+
+
+.alquilfondo {
+
+    background-image: $back-color-green, url(../assets/Img/pikrepo.jpg);
+    @extend .fondobase;    /*DeFino posiciones a la imagen de fondo y oculto la barra de despazamiento del main*/
+
+    .contmap {
+        
+        @include dimensiones(auto,40%,5vh,4vh);                               /* Defino propiedades del mapa de la ubicacion del lugar */       
+        background-image: $back-color-red;
+        border-radius: map-get($borde_radium, radio-contmap-descclases);
+        text-align: center;
+    
+    }
+
+
+}

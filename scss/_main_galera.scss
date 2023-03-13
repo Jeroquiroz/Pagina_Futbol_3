@@ -1,0 +1,28 @@
+
+
+.galeria    {
+
+    background-image: $back-color-green, url(../assets/Img/pikrepo.jpg);
+    @extend .fondobase;
+    text-align: center;
+    padding: 5em;
+    color: white;
+    text-decoration: underline;
+    
+    .carousel {
+
+        width: 80%;
+
+        .tamaño {
+
+            object-fit: cover;
+            height: 100vh;
+    
+            }
+        }
+    
+}
+
+
+
+

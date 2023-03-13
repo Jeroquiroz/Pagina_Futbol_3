@@ -1,0 +1,11 @@
+
+@mixin dimensiones ($altura,$ancho,$margen,$margenint){
+
+    height: $altura;
+    width: $ancho;
+    margin: $margen;
+    padding: $margenint;
+
+}
+
+

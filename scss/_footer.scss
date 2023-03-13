@@ -1,0 +1,19 @@
+
+
+.diseño   {
+
+    background-color: white;
+    background-image: $back-color-red;
+
+    .iconoig {
+
+        font-size: 1.5rem;
+       color: white;       
+       -webkit-text-stroke: map-get($bordes, borde-fuente-footer);
+   
+   }
+
+}
+
+
+

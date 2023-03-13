@@ -1,0 +1,82 @@
+ 
+ /* Header para todas las paginas */ 
+
+.positionhead   { 
+
+    z-index: 10; /*Coloco la cabecer en superposicion al resto de los contenedores*/
+    position: sticky !important; /*Dejo el header en posicion pegajosa*/
+    top: 0px !important;
+
+
+    .cabecera {
+
+        background-size: cover; /*Hago que la foto ocupe todo el contenedor*/
+        @include dimensiones(auto,auto,0,1vh 1vh);
+        border-bottom: map-get($bordes, borde-header); ; 
+        background-image: $back-color-green, url(../assets/Img/fondo1.jpg); /*Realizo una imagen de fondo con una capa gradiente por encima para que no se confundan los textos de adelante*/
+        
+        .logo {   
+
+            top: 0px;
+            left: 10vw; 
+            
+            }
+
+        .flextitulo {
+
+            display: flex;
+            justify-content: flex-end;
+
+            .titulo  {
+
+                font-weight: bolder;
+                color: white;
+                -webkit-text-stroke: map-get($bordes, borde-titulo); /*Defino color, un borde al titulo, su posicion y el tamaño de la fuente*/
+                
+                }
+                
+            }    
+           
+        .ulmod {
+            
+                @include dimensiones(21vh,100%,0,0);
+                justify-content: flex-end;
+                align-items: flex-end;
+
+                .links  { 
+
+                    text-decoration: none; /*Le quito el subrayado a los links*/
+                    color: rgb(255, 255, 255) !important;
+                    transition: underline 0.5s ease;
+                    -webkit-text-stroke: map-get($bordes, borde-links) !important;
+                    margin: 0vh 2vh 0vh 0vh;
+
+                    &:hover
+                            {   
+                                color: rgb(0, 0, 0) !important;
+                                text-decoration: underline;
+                            }
+    
+                    }  
+
+            }       
+        }        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

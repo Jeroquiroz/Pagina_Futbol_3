@@ -1,0 +1,32 @@
+
+.tablafondo {
+
+    background-image: $back-color-green, url(../assets/Img/pikrepo.jpg);
+    @extend .fondobase; /*Defino posiciones a la imagen de fondo y oculto la barra de despazamiento del main*/
+
+    .tabla {
+
+        background-image: $back-color-red;
+        border: map-get($bordes, borde-tabla);
+
+    }
+
+    .repasa_dias  {    
+
+        @include dimensiones(auto,auto,13vh 13vw,1vh); 
+        border-radius: map-get($borde_radium, radio-repasa);
+        background-image: $back-color-red;
+        text-align: center; 
+        text-decoration: underline; /*Subrayo el titulo al video*/
+
+        .repasa1_dias { 
+
+            padding: 2vh;
+            background-color: rgba(0, 0, 0, 0);
+            
+            }
+            
+        }
+
+            }
+

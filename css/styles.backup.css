@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap');
+
+    *   {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+        }
+
+
+ul li       {   
+                list-style: none;
+                margin: 0;  
+                padding: 0;
+                display: inline-block;
+            }
+
+
+ /* Header para todas las paginas */           
+
+
+.positionhead   {   
+                    z-index: 10; /*Coloco la cabecer en superposicion al resto de los contenedores*/
+                    position: sticky !important; /*Dejo el header en posicion pegajosa*/
+                    top: 0px !important;
+
+                }
+
+
+.cabecera {
+                
+                background-image: linear-gradient(rgba(0, 0, 0, 0.774),rgba(19, 66, 0, 0.452)),url(../assets/Img/fondo1.jpg); /*Realizo una imagen de fondo con una capa gradiente por encima para que no se confundan los textos de adelante*/
+                background-size: cover; /*Hago que la foto ocupe todo el contenedor*/
+                height: auto; /*Defino la altura del header*/
+                padding: 1vh 1vh;
+                border-bottom: 5px solid rgb(80, 17, 17) ;         
+          }
+
+         
+.logo   {   
+            top: 0px;
+            left: 10vw; 
+        }
+
+
+.flextitulo {
+
+                display: flex;
+                justify-content: flex-end;
+
+            }        
+
+
+.titulo     {   
+                font-weight: bolder;
+                color: white;
+                -webkit-text-stroke: 2px rgb(0, 0, 0); /*Defino color, un borde al titulo, su posicion y el tamaño de la fuente*/
+            }
+
+
+
+.links  {    
+            text-decoration: none; /*Le quito el subrayado a los links*/
+            color: rgb(255, 255, 255) !important;
+            transition: underline 0.5s ease;
+            -webkit-text-stroke: 0.2px rgb(0, 0, 0) !important;
+            margin: 0vh 2vh 0vh 0vh;
+        }
+
+
+.links:hover
+            {   
+                color: rgb(0, 0, 0) !important;
+                text-decoration: underline;
+            }
+
+
+.ulmod {
+            width: 100%;
+            height: 21vh;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+ 
+
+
+
+ /* Main pagina INDEX para todas las paginas */   
+
+
+.contprincipal  {
+                    
+                    color: white;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.89),rgba(9, 43, 6, 0.74)), url(../assets/Img/fondo.jpg);
+                    background-repeat: no-repeat;   
+                    background-size: cover;
+                    background-position: center;   
+                    overflow: hidden; /*Deino posiciones a la imagen de fondo y oculto la barra de despazamiento del main*/
+
+                }
+
+
+
+/* INDEX - FAIR PLAY */
+
+
+
+.fairplay   { 
+                display: flex;                 /* Define las posciones del contenedor de la imagen y el texto del Fair play */
+                flex-direction: row;
+                justify-content: space-evenly;
+                width: 100%;
+
+            }
+
+
+.confairplay    {   
+                
+                    width: 100%;        /* Define propiedades del texto de Fair play */
+                    padding: 1vh;
+                    margin: 4vh 3vh 0vh 4vh;
+                    
+                } 
+
+
+.imgfair        {   
+                    align-self: flex-end;            /* Define las propiedades de la imagen de Fair play */
+                    margin: 4vh 0vh 4vh 10vh;
+                    border: 5px solid rgba(116, 17, 17, 0.493);
+
+                } 
+
+
+
+
+
+/* CARDS INDEX */
+
+
+.quitlinea  {
+                text-decoration: none;      /* Quita el subrayado del link de "Inscribite" de la card */
+                color: white;
+            }
+
+
+
+.card-group {
+                width: 80%;
+                margin: 0 auto;         /* Define propiedades del grupo de cards */
+                text-align: center;
+            
+            }
+
+
+.card   {   
+            background-image: linear-gradient(rgba(0, 0, 0, 0.932),rgba(85, 0, 0, 0.856));  /* Define las propiedades de cada card */
+            margin: 7vh 5vh 0vh 5vh;
+            padding: 3vh 0vh 0vh 0vh;
+            color: rgb(255, 255, 255);
+            align-items: center;
+
+        }
+
+.card-img-top {
+                    width: 80%;             /* Define las imagenes de las cards */
+                    object-fit: cover;
+
+                }
+
+
+
+/* REPASA NUESTRO AÑO - INDEX *//* REPASA NUESTRO AÑO - INDEX */
+
+
+.repasa{    
+            border-radius: 10px 100px / 120px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.932),rgba(85, 0, 0, 0.856));
+            padding: 1vh;
+            text-align: center; 
+            text-decoration: underline; /*Subrayo el titulo al video*/
+            margin: 13vh 13vw ;
+        }
+
+.repasa1 {  
+            padding: 2vh;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+
+
+/* FOOTER - GENERAL */
+
+
+.diseño   {
+
+            background-color: white;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.932),rgba(85, 0, 0, 0.788));
+
+        }
+
+
+
+.iconoig {
+
+             font-size: 1.5rem;
+            color: white;       
+            -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+
+        }
+
+
+
+/* DISEÑO PAGINA - GALERIA */
+
+
+.galeria    {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.733),rgba(9, 49, 6, 0.774)), url(../assets/Img/pikrepo.jpg);
+                background-repeat: no-repeat;   
+                background-size: cover;
+                background-position: center; 
+                text-align: center;
+                padding: 5em;
+                color: white;
+                text-decoration: underline;
+            }
+
+
+.carousel {
+
+                width: 80%;
+            }
+            
+
+.tamaño {
+
+    object-fit: cover;
+    height: 100vh;
+}
+
+
+
+
+/* DISEÑO PAGINA - ALQUILAMOS */
+
+
+.alquilfondo {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.89),rgba(9, 43, 6, 0.74)), url(../assets/Img/pikrepo.jpg);
+    background-repeat: no-repeat;   
+    background-size: cover;
+    background-position: center;   
+    overflow: hidden;                           /*DeFino posiciones a la imagen de fondo y oculto la barra de despazamiento del main*/
+
+}
+
+.contmap {
+
+    margin: 5vh;                                 /* Defino propiedades del mapa de la ubicacion del lugar */       
+    background-image: linear-gradient(rgba(0, 0, 0, 0.596),rgba(51, 1, 1, 0.719));
+    border-radius: 100px 10px / 120px;
+    width: 40%;
+    text-align: center;
+    padding: 4vh;
+
+}
+
+
+
+/* DISEÑO PAGINA - DIAS Y HORAS */
+
+
+.tablafondo {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.89),rgba(9, 43, 6, 0.74)), url(../assets/Img/pikrepo.jpg);
+    background-repeat: no-repeat;   
+    background-size: cover;
+    background-position: center;   
+    overflow: hidden; /*Defino posiciones a la imagen de fondo y oculto la barra de despazamiento del main*/
+
+            }
+
+.tabla {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.596),rgba(51, 1, 1, 0.719));
+            border: rgba(241, 0, 0, 0.589);
+        }
+
+
+
+/* DISEÑO PAGINA - INSCRIBITE */
+
+
+.descclases {
+
+            background-image: linear-gradient(rgba(0, 0, 0, 0.596),rgba(51, 1, 1, 0.719));  /* Defino contenedor del texto de la pagina Inscribite */
+        
+            border-radius: 100px 10px / 120px;
+        }
+        
+
+
+
+
+
+
+/* RESPONSIVE PAGINAS - GALERIA E INSCRIBITE */
+
+
+
+
+@media screen and (max-width: 992px) {
+
+
+.formular {
+
+    flex-direction: column;
+    width: 80%;
+
+}    
+
+
+.editcar {
+
+    display: flex;
+    justify-content: center;
+    width:100%;
+    padding: 0;
+    margin: 0;
+    height:  70vh;
+    object-fit: cover;
+    
+}
+
+
+.tamaño {
+
+    width: 100% !important;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+    height: 55vh;
+}
+
+
+
+.galeria    {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.733),rgba(9, 49, 6, 0.774)), url(../assets/Img/pikrepo.jpg);
+    background-repeat: no-repeat;   
+    background-size: cover;
+    background-position: center; 
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-decoration: underline;
+    
+            }
+
+
+/* RESPONSIVE - HEADER */
+
+.cabecera{
+
+    z-index: 10; /*Coloco la cabecer en superposicion al resto de los contenedores*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.575),rgba(19, 66, 0, 0.452)),url(../assets/Img/fondo1.jpg); /*Realizo una imagen de fondo con una capa gradiente por encima para que no se confundan los textos de adelante*/
+    background-size: cover; /*Hago que la foto ocupe todo el contenedor*/
+    position: sticky; /*Dejo el header en posicion pegajosa*/
+    top: 0px;
+    height: auto; /*Defino la altura del header*/
+    padding: 2vh 2vh;
+    border: 1px solid rgb(75, 6, 6) ;  
+
+        }
+
+
+
+.flextitulo {
+        
+             display: none;      
+            }
+
+
+.titulo { 
+            display:none; 
+        }
+
+
+.logo   {   
+            height: 12vh;
+            width: 15vh;  
+            
+        }
+
+.links {
+            color: rgb(255, 255, 255) !important;
+            margin: none;
+        }     
+
+
+.ulmod {
+            width: 100%;
+            height: auto;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+
+}

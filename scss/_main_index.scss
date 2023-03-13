@@ -1,0 +1,81 @@
+
+
+ .contprincipal  {
+                    
+    color: white;
+    background-image: $back-color-green, url(../assets/Img/fondo.jpg);
+    @extend .fondobase; /*Deino posiciones a la imagen de fondo y oculto la barra de despazamiento del main*/
+
+    .fairplay   { 
+    
+        display: flex;                 /* Define las posciones del contenedor de la imagen y el texto del Fair play */
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+
+        .confairplay  {   
+
+            @include dimensiones(auto,100%,4vh 3vh 0vh 4vh,1vh);       /* Define propiedades del texto de Fair play */
+             
+            }
+        
+        .imgfair  {   
+
+            align-self: flex-end;            /* Define las propiedades de la imagen de Fair play */
+            margin: 4vh 0vh 4vh 10vh;
+            border: map-get($bordes, borde-imgfair);
+        
+        } 
+        
+        }
+    
+    .card-group  {
+
+        width: 80%;
+        margin: 0 auto;         /* Define propiedades del grupo de cards */
+        text-align: center;
+
+        .card   {  
+            
+            @include dimensiones(auto,auto,7vh 5vh 0vh 5vh,3vh 0vh 0vh 0vh);
+            background-image: $back-color-red ;  /* Define las propiedades de cada card */
+            color: rgb(255, 255, 255);
+            align-items: center;
+
+            .card-img-top  {
+
+                width: 80%;             /* Define las imagenes de las cards */
+                object-fit: cover;
+            
+            }
+            
+            .quitlinea  {
+
+                text-decoration: none;      /* Quita el subrayado del link de "Inscribite" de la card */
+                color: white;
+                
+                }
+
+            }
+            
+        }
+
+    .repasa  {    
+        
+        @include dimensiones(auto,auto,13vh 13vw,1vh);
+        border-radius: map-get($borde_radium, radio-repasa);
+        background-image: $back-color-red;
+        text-align: center; 
+        text-decoration: underline; /*Subrayo el titulo al video*/
+
+        .repasa1 { 
+
+            padding: 2vh;
+            background-color: rgba(0, 0, 0, 0);
+            
+            }
+            
+        }
+                    
+
+}

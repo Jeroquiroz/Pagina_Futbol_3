@@ -1,0 +1,35 @@
+
+
+
+$back-color-red: linear-gradient(rgba(0, 0, 0, 0.932),rgba(85, 0, 0, 0.856));
+$back-color-green:linear-gradient(rgba(0, 0, 0, 0.774),rgba(16, 54, 1, 0.452));
+
+
+/* mapas, los espacios dentro de los mapas es para organizarme mejor entre pagina y pagina */
+
+
+$bordes: (
+
+borde-header : 5px solid rgb(80, 17, 17),
+borde-titulo: 2px rgb(0, 0, 0),
+borde-links:  0.2px rgb(0, 0, 0),
+
+borde-imgfair: 5px solid rgba(116, 17, 17, 0.493),
+
+borde-tabla: rgba(241, 0, 0, 0.589),
+
+borde-fuente-footer: 0.5px rgb(0, 0, 0),
+
+borde-cabecera-mq:1px solid rgb(75, 6, 6),
+
+);
+
+
+$borde_radium: (
+
+radio-repasa: 10px 100px / 120px,
+
+radio-contmap-descclases: 100px 10px / 120px,
+
+);
+
