@@ -1,12 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap");
-/* mapas, los espacios dentro de los mapas es para organizarme mejor entre pagina y pagina */
 .fondobase, .contprincipal, .alquilfondo, .tablafondo, .galeria {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   overflow: hidden; }
 
+/* mapas, los espacios dentro de los mapas es para organizarme mejor entre pagina y pagina */
 * {
   margin: 0;
   padding: 0;
@@ -63,7 +63,7 @@ ul li {
         -webkit-text-stroke: 0.2px black !important;
         margin: 0vh 2vh 0vh 0vh; }
         .positionhead .cabecera .ulmod .links:hover {
-          color: black !important;
+          color: #ff00f2 !important;
           text-decoration: underline; }
 
 .contprincipal {
@@ -181,8 +181,108 @@ ul li {
     color: white;
     -webkit-text-stroke: 0.5px black; }
 
-/* RESPONSIVE PAGINAS - GALERIA E INSCRIBITE */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
+  /* RESPONSIVE INDEX */
+  .contprincipal .fairplay {
+    display: flex;
+    /* Define las posciones del contenedor de la imagen y el texto del Fair play */
+    flex-direction: column;
+    width: 100%; }
+    .contprincipal .fairplay .confairplay {
+      height: auto;
+      width: 100%;
+      margin: 2vh;
+      padding: 2vh;
+      /* Define propiedades del texto de Fair play */
+      flex-direction: column; }
+    .contprincipal .fairplay .imgfair {
+      align-self: center;
+      margin: 2vh;
+      /* Define las propiedades de la imagen de Fair play */
+      border: 5px solid rgba(116, 17, 17, 0.493);
+      height: auto;
+      width: 70%;
+      margin: 2vh;
+      padding: 0vh; }
+  .contprincipal .card-group {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    /* Define propiedades del grupo de cards */
+    text-align: center; }
+    .contprincipal .card-group .card {
+      height: auto;
+      width: 100%;
+      margin: 5vh 0vh 5vh 0vh;
+      padding: 2vh 0vh 0vh 0vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.932), rgba(85, 0, 0, 0.856));
+      /* Define las propiedades de cada card */
+      color: white;
+      align-items: center; }
+      .contprincipal .card-group .card .card-img-top {
+        width: 75%;
+        /* Define las imagenes de las cards */
+        object-fit: cover; }
+      .contprincipal .card-group .card .quitlinea {
+        text-decoration: none;
+        /* Quita el subrayado del link de "Inscribite" de la card */
+        color: white; }
+  .contprincipal .repasa {
+    height: auto;
+    width: auto;
+    margin: 2vh;
+    padding: 1vh;
+    border-radius: 10px 100px/120px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.932), rgba(85, 0, 0, 0.856));
+    text-align: center;
+    text-decoration: underline;
+    /*Subrayo el titulo al video*/ }
+    .contprincipal .repasa .repasa1 {
+      width: 90% !important;
+      padding: 1vh;
+      background-color: rgba(0, 0, 0, 0); }
+  /* RESPONSIVE Dias Y HORAS */
+  .tablafondo .tabla {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.932), rgba(85, 0, 0, 0.856));
+    border: rgba(241, 0, 0, 0.589); }
+  .tablafondo .repasa_dias {
+    height: 100%;
+    width: 100%;
+    margin: 1vh;
+    padding: 2vh;
+    border-radius: 10px 100px/120px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.932), rgba(85, 0, 0, 0.856));
+    text-align: center;
+    text-decoration: underline;
+    /*Subrayo el titulo al video*/ }
+    .tablafondo .repasa_dias .repasa1_dias {
+      width: 100% !important;
+      background-color: rgba(0, 0, 0, 0); }
+  /* RESPONSIVE ALQUILANOS */
+  .alquilfondo {
+    height: 100%;
+    width: 100%;
+    margin: 0vh;
+    padding: 0vh; }
+    .alquilfondo .secmedia {
+      justify-content: start;
+      flex-direction: column !important; }
+      .alquilfondo .secmedia .contmap {
+        height: 100%;
+        width: 100%;
+        margin: 1vh;
+        padding: 5vh;
+        /* Defino propiedades del mapa de la ubicacion del lugar */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.932), rgba(85, 0, 0, 0.856));
+        border-radius: 100px 10px/120px;
+        text-align: center; }
+      .alquilfondo .secmedia .mapasmedia {
+        height: 40vh;
+        width: 100vh;
+        margin: 2vh !important;
+        padding: 1vh; }
+  /* RESPONSIVE PAGINAS - GALERIA E INSCRIBITE */
   .formular {
     flex-direction: column;
     width: 80%; }
@@ -202,7 +302,7 @@ ul li {
       width: 100%;
       padding: 0;
       margin: 0;
-      height: 70vh;
+      height: auto;
       object-fit: cover; }
       .galeria .editcar .tamaño {
         width: 100% !important;
@@ -211,32 +311,158 @@ ul li {
         object-fit: cover;
         height: 55vh; }
   /* RESPONSIVE - HEADER */
-  .cabecera {
+  .positionhead {
     z-index: 10;
     /*Coloco la cabecer en superposicion al resto de los contenedores*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.774), rgba(16, 54, 1, 0.452)), url(../assets/Img/fondo1.jpg);
-    /*Realizo una imagen de fondo con una capa gradiente por encima para que no se confundan los textos de adelante*/
-    background-size: cover;
-    /*Hago que la foto ocupe todo el contenedor*/
-    position: sticky;
+    position: sticky !important;
     /*Dejo el header en posicion pegajosa*/
-    top: 0px;
-    height: auto;
-    /*Defino la altura del header*/
-    padding: 2vh 2vh;
-    border: 1px solid #4b0606; }
-    .cabecera .logo {
-      height: 12vh;
-      width: 15vh; }
-    .cabecera .flextitulo {
-      display: none; }
-      .cabecera .flextitulo .titulo {
-        display: none; }
-    .cabecera .ulmod {
-      width: 100%;
+    top: 0px !important; }
+    .positionhead .cabecera {
+      z-index: 10;
+      /*Coloco la cabecer en superposicion al resto de los contenedores*/
+      background-size: cover;
+      /*Hago que la foto ocupe todo el contenedor*/
+      position: sticky;
+      /*Dejo el header en posicion pegajosa*/
+      top: 0px;
       height: auto;
-      justify-content: flex-end;
-      align-items: flex-end; }
-      .cabecera .ulmod .links {
-        color: white !important;
-        margin: none; } }
+      /*Defino la altura del header*/
+      padding: 2vh 2vh;
+      border: 1px solid #4b0606;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.774), rgba(16, 54, 1, 0.452)), url(../assets/Img/fondo1.jpg);
+      /*Realizo una imagen de fondo con una capa gradiente por encima para que no se confundan los textos de adelante*/ }
+      .positionhead .cabecera .logo {
+        height: 12vh;
+        width: 15vh; }
+      .positionhead .cabecera .flextitulo {
+        display: none; }
+        .positionhead .cabecera .flextitulo .titulo {
+          display: none; }
+      .positionhead .cabecera .ulmod {
+        width: 100%;
+        height: auto;
+        justify-content: flex-end;
+        align-items: flex-end; }
+        .positionhead .cabecera .ulmod .links {
+          color: white !important;
+          margin: none; }
+          .positionhead .cabecera .ulmod .links:hover {
+            color: black !important;
+            text-decoration: underline; } }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* RESPONSIVE INDEX */
+  .contprincipal .fairplay {
+    display: flex;
+    /* Define las posciones del contenedor de la imagen y el texto del Fair play */
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: auto;
+    width: 100%;
+    margin: 2vh;
+    padding: 4vh; }
+    .contprincipal .fairplay .confairplay {
+      height: auto;
+      width: 80%;
+      margin: 4vh 3vh 0vh 4vh;
+      padding: 1vh;
+      /* Define propiedades del texto de Fair play */ }
+    .contprincipal .fairplay .imgfair {
+      align-self: center;
+      /* Define las propiedades de la imagen de Fair play */
+      border: 5px solid rgba(116, 17, 17, 0.493);
+      height: auto;
+      width: 40%;
+      margin: 4vh;
+      padding: 0vh; }
+  .contprincipal .card-group {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 5vh auto;
+    /* Define propiedades del grupo de cards */
+    text-align: center; }
+    .contprincipal .card-group .card {
+      height: auto;
+      width: 100%;
+      margin: 5vh 0vh 5vh 0vh;
+      padding: 2vh 0vh 0vh 0vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.932), rgba(85, 0, 0, 0.856));
+      /* Define las propiedades de cada card */
+      color: white;
+      align-items: center; }
+      .contprincipal .card-group .card .card-img-top {
+        width: 75%;
+        /* Define las imagenes de las cards */
+        object-fit: cover; }
+      .contprincipal .card-group .card .quitlinea {
+        text-decoration: none;
+        /* Quita el subrayado del link de "Inscribite" de la card */
+        color: white; }
+  /* RESPONSIVE - HEADER */
+  .positionhead {
+    z-index: 10;
+    /*Coloco la cabecer en superposicion al resto de los contenedores*/
+    position: sticky !important;
+    /*Dejo el header en posicion pegajosa*/
+    top: 0px !important; }
+    .positionhead .cabecera {
+      z-index: 10;
+      /*Coloco la cabecer en superposicion al resto de los contenedores*/
+      background-image: linear-gradient(rgba(0, 0, 0, 0.774), rgba(16, 54, 1, 0.452)), url(../assets/Img/fondo1.jpg);
+      /*Realizo una imagen de fondo con una capa gradiente por encima para que no se confundan los textos de adelante*/
+      background-size: cover;
+      /*Hago que la foto ocupe todo el contenedor*/
+      position: sticky;
+      /*Dejo el header en posicion pegajosa*/
+      top: 0px;
+      height: auto;
+      /*Defino la altura del header*/
+      padding: 2vh 2vh;
+      border: 1px solid #4b0606; }
+      .positionhead .cabecera .logo {
+        height: 12vh;
+        width: 15vh; }
+      .positionhead .cabecera .flextitulo {
+        display: none; }
+        .positionhead .cabecera .flextitulo .titulo {
+          display: none; }
+      .positionhead .cabecera .ulmod {
+        width: 100%;
+        height: auto;
+        justify-content: flex-end;
+        align-items: flex-end; }
+        .positionhead .cabecera .ulmod .links {
+          color: white !important;
+          margin: none; }
+          .positionhead .cabecera .ulmod .links:hover {
+            color: black !important;
+            text-decoration: underline; }
+  /* RESPONSIVE PAGINAS - GALERIA E INSCRIBITE */
+  .formular {
+    flex-direction: column;
+    width: 80%; }
+  .galeria {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.774), rgba(16, 54, 1, 0.452)), url(../assets/Img/pikrepo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-decoration: underline; }
+    .galeria .editcar {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      height: auto;
+      object-fit: cover; }
+      .galeria .editcar .tamaño {
+        width: 100% !important;
+        padding: 0;
+        margin: 0;
+        object-fit: cover;
+        height: 100vh; } }

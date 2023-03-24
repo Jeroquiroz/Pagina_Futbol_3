@@ -1,11 +1,170 @@
 
 
-/* RESPONSIVE PAGINAS - GALERIA E INSCRIBITE */
+
+
+@media screen and (max-width: 768px) {
+    
+    
+
+    /* RESPONSIVE INDEX */
+
+
+        .contprincipal  {
+                    
+    
+            .fairplay   { 
+        
+                display: flex;                 /* Define las posciones del contenedor de la imagen y el texto del Fair play */
+                flex-direction: column;
+                width: 100%;
+    
+                .confairplay  {   
+    
+                @include dimensiones(auto,100%,2vh ,2vh);      /* Define propiedades del texto de Fair play */
+                flex-direction: column;   
+                 
+                }
+            
+                .imgfair  {   
+
+                align-self: center;
+                margin: 2vh ; /* Define las propiedades de la imagen de Fair play */
+                border: map-get($bordes, borde-imgfair);
+                @include dimensiones(auto,70%,2vh ,0vh);
+
+            
+                } 
+            
+            }
+
+
+            .card-group  {
+
+                display: flex;
+                flex-direction: column;
+                width: 90% ;
+                margin: 0 auto;         /* Define propiedades del grupo de cards */
+                text-align: center;
+        
+                .card   {  
+                    
+                    @include dimensiones(auto,100%, 5vh 0vh 5vh 0vh, 2vh 0vh 0vh 0vh);
+                    background-image: $back-color-red ;  /* Define las propiedades de cada card */
+                    color: rgb(255, 255, 255);
+                    align-items: center;
+        
+                    .card-img-top  {
+        
+                        width: 75%;             /* Define las imagenes de las cards */
+                        object-fit: cover;
+                    
+                    }
+                    
+                    .quitlinea  {
+        
+                        text-decoration: none;      /* Quita el subrayado del link de "Inscribite" de la card */
+                        color: white;
+                        
+                    }
+        
+                }
+                    
+            } 
+                
+                .repasa  {    
+        
+                    @include dimensiones(auto,auto,2vh,1vh);
+                    border-radius: map-get($borde_radium, radio-repasa);
+                    background-image: $back-color-red;
+                    text-align: center; 
+                    text-decoration: underline; /*Subrayo el titulo al video*/
+            
+                    .repasa1 { 
+                        
+                        width: 90% !important;
+                        padding: 1vh;
+                        background-color: rgba(0, 0, 0, 0);
+                        
+                        }
+                        
+                }
+
+        }   
 
 
 
 
-@media screen and (max-width: 992px) {
+    /* RESPONSIVE Dias Y HORAS */
+
+
+
+        .tablafondo {
+
+            .tabla {
+
+                background-image: $back-color-red;
+                border: map-get($bordes, borde-tabla);
+        
+            }
+        
+            .repasa_dias  {    
+        
+                @include dimensiones(100%,100%,1vh,2vh);
+                border-radius: map-get($borde_radium, radio-repasa);
+                background-image: $back-color-red;
+                text-align: center; 
+                text-decoration: underline; /*Subrayo el titulo al video*/
+        
+                .repasa1_dias { 
+                    
+                    width: 100% !important;
+                    background-color: rgba(0, 0, 0, 0);
+                    
+                }
+                    
+            }
+
+        }
+                    
+                
+        
+    /* RESPONSIVE ALQUILANOS */
+
+
+
+        .alquilfondo {
+
+            @include dimensiones(100%,100%,0vh,0vh); 
+
+           .secmedia { 
+
+                justify-content: start;
+            
+                flex-direction: column !important;
+
+
+                .contmap {
+
+                    @include dimensiones(100%,100%,1vh,5vh);                               /* Defino propiedades del mapa de la ubicacion del lugar */       
+                    background-image: $back-color-red;
+                    border-radius: map-get($borde_radium, radio-contmap-descclases);
+                    text-align: center;
+            
+                }
+        
+                .mapasmedia {
+                
+                    @include dimensiones(40vh ,100vh, 2vh !important, 1vh);
+              
+            
+                }
+            }
+        }
+
+
+
+
+    /* RESPONSIVE PAGINAS - GALERIA E INSCRIBITE */
 
 
     .formular {
@@ -35,7 +194,7 @@
             width:100%;
             padding: 0;
             margin: 0;
-            height:  70vh;
+            height: auto;
             object-fit: cover;
 
             .tamaño {
@@ -51,49 +210,262 @@
         
                 }
     
+
     
+
+
     /* RESPONSIVE - HEADER */
-    
-    .cabecera{
-    
+
+
+    .positionhead   { 
+
         z-index: 10; /*Coloco la cabecer en superposicion al resto de los contenedores*/
-        background-image: $back-color-green,url(../assets/Img/fondo1.jpg); /*Realizo una imagen de fondo con una capa gradiente por encima para que no se confundan los textos de adelante*/
-        background-size: cover; /*Hago que la foto ocupe todo el contenedor*/
-        position: sticky; /*Dejo el header en posicion pegajosa*/
-        top: 0px;
-        height: auto; /*Defino la altura del header*/
-        padding: 2vh 2vh;
-        border: map-get($bordes, borde-cabecera-mq) ;  
+        position: sticky !important; /*Dejo el header en posicion pegajosa*/
+        top: 0px !important;
+    
+        .cabecera{
+    
+            z-index: 10; /*Coloco la cabecer en superposicion al resto de los contenedores*/
+            background-size: cover; /*Hago que la foto ocupe todo el contenedor*/
+            position: sticky; /*Dejo el header en posicion pegajosa*/
+            top: 0px;
+            height: auto; /*Defino la altura del header*/
+            padding: 2vh 2vh;
+            border: map-get($bordes, borde-cabecera-mq) ;  
+            background-image: $back-color-green,url(../assets/Img/fondo1.jpg); /*Realizo una imagen de fondo con una capa gradiente por encima para que no se confundan los textos de adelante*/
 
-        .logo   {   
             
-            height: 12vh;
-            width: 15vh;  
+                .logo   {   
+                    height: 12vh;
+                    width: 15vh;  
             
-        }
+                }
 
-        .flextitulo {
+                .flextitulo {
             
-            display: none;   
+                    display: none;   
 
-            .titulo { 
-                display:none; 
-            }
+                        .titulo { 
+                            display:none; 
+                        }
 
-           }
+                }
 
-        .ulmod {
+
+                .ulmod {    
                     width: 100%;
                     height: auto;
                     justify-content: flex-end;
                     align-items: flex-end;
 
                     .links {
+
                         color: rgb(255, 255, 255) !important;
                         margin: none;
+
+                        &:hover
+                        {   
+                            color: rgb(0, 0, 0) !important;
+                            text-decoration: underline;
+                        }
+
+                        
                     }     
             
+                }   
+        }
+    
+    }
+
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+
+        /* RESPONSIVE INDEX */
+
+
+        .contprincipal  {
+                    
+    
+            .fairplay   { 
+    
+                display: flex;                 /* Define las posciones del contenedor de la imagen y el texto del Fair play */
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                @include dimensiones(auto,100%,2vh,4vh);
+        
+                .confairplay  {   
+        
+                    @include dimensiones(auto,80%,4vh 3vh 0vh 4vh,1vh);       /* Define propiedades del texto de Fair play */
+                     
+                    }
+            
+                .imgfair  {   
+
+                align-self: center;  /* Define las propiedades de la imagen de Fair play */
+                border: map-get($bordes, borde-imgfair);
+                @include dimensiones(auto,40%,4vh,0vh);
+
+            
+                } 
+            
+            }
+
+
+            .card-group  {
+
+                display: flex;
+                flex-direction: column;
+                width: 50% ;
+                margin: 5vh auto;         /* Define propiedades del grupo de cards */
+                text-align: center;
+        
+                .card   {  
+                    
+                    @include dimensiones(auto,100%, 5vh 0vh 5vh 0vh, 2vh 0vh 0vh 0vh);
+                    background-image: $back-color-red ;  /* Define las propiedades de cada card */
+                    color: rgb(255, 255, 255);
+                    align-items: center;
+        
+                    .card-img-top  {
+        
+                        width: 75%;             /* Define las imagenes de las cards */
+                        object-fit: cover;
+                    
+                    }
+                    
+                    .quitlinea  {
+        
+                        text-decoration: none;      /* Quita el subrayado del link de "Inscribite" de la card */
+                        color: white;
+                        
+                    }
+        
+                }
+                    
+            } 
+        }
+
+    /* RESPONSIVE - HEADER */
+
+
+    .positionhead   { 
+
+        z-index: 10; /*Coloco la cabecer en superposicion al resto de los contenedores*/
+        position: sticky !important; /*Dejo el header en posicion pegajosa*/
+        top: 0px !important;
+    
+        .cabecera{
+    
+            z-index: 10; /*Coloco la cabecer en superposicion al resto de los contenedores*/
+            background-image: $back-color-green,url(../assets/Img/fondo1.jpg); /*Realizo una imagen de fondo con una capa gradiente por encima para que no se confundan los textos de adelante*/
+            background-size: cover; /*Hago que la foto ocupe todo el contenedor*/
+            position: sticky; /*Dejo el header en posicion pegajosa*/
+            top: 0px;
+            height: auto; /*Defino la altura del header*/
+            padding: 2vh 2vh;
+            border: map-get($bordes, borde-cabecera-mq) ;  
+
+            .logo   {   
+            
+                height: 12vh;
+                width: 15vh;  
+            
+            }
+
+            .flextitulo {
+            
+                display: none;   
+
+                .titulo { 
+                    display:none; 
+                }
+
+           }
+
+            .ulmod {    
+                    width: 100%;
+                    height: auto;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+
+                    .links {
+
+                        color: rgb(255, 255, 255) !important;
+                        margin: none;
+
+                        &:hover
+                        {   
+                            color: rgb(0, 0, 0) !important;
+                            text-decoration: underline;
+                        }
+   
+                    }     
             }   
         }
     
     }
+
+
+    /* RESPONSIVE PAGINAS - GALERIA E INSCRIBITE */
+
+    .formular {
+
+        flex-direction: column;
+        width: 80%;
+    
+    }    
+    
+    
+    .galeria    {
+    
+        background-image: $back-color-green, url(../assets/Img/pikrepo.jpg);
+        background-repeat: no-repeat;   
+        background-size: cover;
+        background-position: center; 
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        color: white;
+        text-decoration: underline;
+
+        .editcar {
+    
+            display: flex;
+            justify-content: center;
+            width:100%;
+            padding: 0;
+            margin: 0;
+            height: auto;
+            object-fit: cover;
+
+            .tamaño {
+    
+                width: 100% !important;
+                padding: 0;
+                margin: 0;
+                object-fit: cover;
+                height: 100vh;
+            }
+            
+        }
+        
+                }
+
+
+
+}         
